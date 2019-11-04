@@ -21,6 +21,7 @@ import com.fdmgroup.FairBnBwebsite.service.ReservationService;
 @Controller
 public class ReservationController {
 	
+
 private final ReservationService reservationService;
 private final CustomerService customerService;
 private final PropertyService propertyService;
