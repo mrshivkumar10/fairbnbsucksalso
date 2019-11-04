@@ -52,7 +52,7 @@ public class CustomerController {
 
 	
 	@PostMapping("/addcustomer")
-	public String addCustomer(@Valid Customer customerAttr, BindingResult result, Model model) {
+	public String addCustomer( Customer customerAttr, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "add-customer";
 		}
@@ -64,7 +64,7 @@ public class CustomerController {
 	}
 
 	@GetMapping("/editcustomer/{id}")
-	public String propertyLocation(@PathVariable("id") Integer customerId, Model model) {
+	public String customerUpdateForm(@PathVariable("id") Integer customerId, Model model) {
 		Iterable<ContactDetail> contactDetails = contactDetailService.getAllContactDetails();
 		model.addAttribute("contactDetailsAttr", contactDetails);
 		
@@ -75,7 +75,7 @@ public class CustomerController {
 	}
 
 	@PostMapping("/updatecustomer/{id}")
-	public String updateLocation(@PathVariable("id") Integer customerId, @Valid Customer customer,
+	public String updateCustomer(@PathVariable("id") Integer customerId, @Valid Customer customer,
 			BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "update-customer";

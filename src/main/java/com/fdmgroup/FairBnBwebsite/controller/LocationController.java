@@ -24,13 +24,13 @@ public class LocationController {
 	}
 	
 	@GetMapping("/locationindex")
-	public String propertyLocation(Model model) {
+	public String propertyLocationIndex(Model model) {
 		model.addAttribute("locationAttr", locationService.getAllLocations());
 		return "index-location";
 	}
 
 	@GetMapping("/locationsignup")
-	public String propertyTypeSignupForm(Model model) {
+	public String locationSignupForm(Model model) {
 		model.addAttribute("locationAttr", locationService.createLocation());
 		return "add-location";
 	}

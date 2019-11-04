@@ -83,12 +83,12 @@ public class HostController {
 	}
 	
 	@PostMapping("/updatehost/{id}")
-	public String updateContactDetail(@PathVariable("id") int hostId,
+	public String updateHost(@PathVariable("id") int hostId,
 			@Valid Host host, BindingResult result, Model model) {
-		logger.debug("updateContactDetail(): hostId " + hostId);
-		logger.debug("updateContactDetail(): host" + host);
-		logger.debug("updateContactDetail(): result " + result);
-		logger.debug("updateContactDetail(): model " + model);
+		logger.debug("updateHost(): hostId " + hostId);
+		logger.debug("updateHost(): host" + host);
+		logger.debug("updateHost(): result " + result);
+		logger.debug("updateHost(): model " + model);
 		if (result.hasErrors()) {
 			return "update-host";
 		}
@@ -103,9 +103,9 @@ public class HostController {
 	}
 	
 	@GetMapping("/deletehost/{id}")
-	public String deletePropertyType(@PathVariable("id") int hostId, Model model) {
-		logger.debug("deletePropertyType(): hostId "+hostId);
-		logger.debug("deletePropertyType(): model "+model);
+	public String deleteHost(@PathVariable("id") int hostId, Model model) {
+		logger.debug("deleteHost(): hostId "+hostId);
+		logger.debug("deleteHost(): model "+model);
 		hostService.deleteHostById(hostId);
 		model.addAttribute("hostAttr", hostService.getAllHosts());
 		logger.debug("model.addAttribute(): hostAttr " + hostService.getAllHosts());
