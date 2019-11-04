@@ -17,7 +17,6 @@ import com.fdmgroup.FairBnBwebsite.model.Host;
 import com.fdmgroup.FairBnBwebsite.model.Location;
 import com.fdmgroup.FairBnBwebsite.model.Property;
 import com.fdmgroup.FairBnBwebsite.model.PropertyType;
-import com.fdmgroup.FairBnBwebsite.repository.HostRepository;
 import com.fdmgroup.FairBnBwebsite.service.HostService;
 import com.fdmgroup.FairBnBwebsite.service.LocationService;
 import com.fdmgroup.FairBnBwebsite.service.PropertyService;

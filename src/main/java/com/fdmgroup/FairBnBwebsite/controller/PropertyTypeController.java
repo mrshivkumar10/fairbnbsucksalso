@@ -2,6 +2,7 @@ package com.fdmgroup.FairBnBwebsite.controller;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.fdmgroup.FairBnBwebsite.model.PropertyType;
 import com.fdmgroup.FairBnBwebsite.service.PropertyTypeService;
 
-import ch.qos.logback.classic.Logger;
 
 @Controller
 public class PropertyTypeController {
 
-	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(PropertyTypeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(PropertyTypeController.class);
 	private final PropertyTypeService propertyTypeService;
 
 	@Autowired
